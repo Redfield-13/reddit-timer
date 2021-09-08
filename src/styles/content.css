@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content{
+    width: 77.43%;
+    height: 1084px;
+    /* background-color: gray; */
+    margin-top: 27px;
+    margin-left: 11.25%;
+    margin-right: 11.25%;
+    align-items: center;
+}
+
+.search{
+    background-color: white;
+    height: 232px;
+    width: 55.23%;
+    margin-left: 22.42%;
+    text-align: center;
+    margin-bottom: 37px;
+}
+.reaction{
+    font-family: 'Bitter', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 45.6px;
+    align-items: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.great{
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19.5px;
+    text-align: center;
+    color: #93918f;
+    margin-bottom: 45px;
+}
+
+.best{
+    width: 35.22%;
+    height: 36px;
+    background-color: #fdb755;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    margin-bottom: 46px;
+}
+
+.best:hover{
+cursor: pointer;
+}
+
+.subreddit{
+    font-weight: 500;
+    text-align: center;
+    line-height: 19.5px;
+    font-size: 16px;
+    font-style: normal;
+    color: #93918f;
+}
+
+.table{
+    height: 332px;
+    width: 77.35%;
+    /* background-color: gray; */
+    margin-left: 163px;
+    /* margin-right: 163px; */
+    position: relative;
+}
+
+.time{
+    width: 86.17%;
+    height: 52px;
+    background-color: #f3f3f3;
+    margin-left: 13.83%;
+}
+
+.col{
+    width: 86.17%;
+    height: 280px;
+    background-color:blue;
+    margin-left: 13.83%;
+}
+.days{
+    display: inline;
+    float: left;
+    width: 13.83%;
+    height: 280px;
+    /* margin-top: 52px; */
+    top: 52px;
+    left: 0;
+    background-color:  #1E2537;
+    ;
+    position: absolute;
+}
+
