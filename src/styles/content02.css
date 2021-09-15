@@ -104,6 +104,8 @@ span.col-1{
     border: 1px solid black;
     float: left;
     text-align: left;
+    overflow: hidden;
+    
 }
 
 span.col-2{
@@ -111,6 +113,7 @@ span.col-2{
     height: 42.5px;
     border: 1px solid black;
     float: left;
+    overflow: hidden;
 }
 
 span.col-3{
@@ -118,6 +121,7 @@ span.col-3{
     width: 7.9375%;
     height: 42.5px;
     float: left;
+    overflow: hidden;
 }
 
 .spn{

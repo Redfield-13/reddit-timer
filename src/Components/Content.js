@@ -16,7 +16,7 @@ function Content() {
                 after = res.data.data.after
                 posts = [...posts,res.data.data.children]
             })
-            
+
         }
         // console.log(posts[0][0].data.created_utc)
         var days = [[],[],[],[],[],[],[]]
@@ -30,7 +30,7 @@ function Content() {
                 days[date.getDay()].push(timestamp)
 
             }
-            
+
         }
         var spans = document.getElementsByClassName('spn')
         for(let i =0 ; i<spans.length;i++){
@@ -41,15 +41,15 @@ function Content() {
             for(let i = 0; i <days[index].length-2;i++){
                 var unix_t = days[index][i]*1000
                 var d = new Date(unix_t)
-                var hours = d.getHours()               
+                var hours = d.getHours()
                 console.log('i:'+i)
                 console.log('iterate:'+((index*24)+hours-1))
                 var mmj = parseInt( spans[((index*24)+hours)].childNodes[0].innerHTML)+1
                 spans[((index*24)+hours)].childNodes[0].innerHTML =mmj
-                
+
                 // console.log(mmj)
             }
-            
+
         }
 
         for (let index = 0; index < spans.length; index++) {
@@ -63,30 +63,30 @@ function Content() {
             if (compare > 0 && compare < 4) {
                 // alert('level-2')
                 spans[index].classList.add('level-2')
-                
+
             }
             if (compare>3 && compare < 6) {
                 // alert('level-3')
                 spans[index].classList.add('level-3')
-                
+
             }
             if (compare>5 && compare < 10) {
                 // alert('level-4')
                 spans[index].classList.add('level-4')
-                
+
             }
             if (compare>9) {
                 // alert('level-5')
                 spans[index].classList.add('level-5')
-                
+
             }
         }
     }
 
-    fetchposts()
+
 
     useEffect(()=>{
-        
+        fetchposts()
     })
 
     return (
@@ -97,7 +97,7 @@ function Content() {
                 <Link to='/search'>
                 <button className='best'>SHOW ME THE BEST TIME</button>
                 </Link>
-                
+
                 <p className='subreddit'>r/javascript</p>
             </div>
             <div className="table">

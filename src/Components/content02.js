@@ -5,6 +5,12 @@ import  Axios from 'axios'
 function Content02() {
 
     const fetchposts = async ()=>{
+        var spans = document.getElementsByClassName('spn')
+        for(let i =0 ; i<spans.length;i++){
+            // spans[i].classList.add('level-3')
+            spans[i].childNodes[0].innerHTML=0
+            // console.log(spans.length)
+        }
         console.log('click')
         var subreddit = document.getElementById('subreddit').value
         var link = 'https://www.reddit.com/r/'+subreddit+'/top.json?limit=23&t=all&after='
@@ -32,7 +38,7 @@ function Content02() {
             }
             
         }
-        var spans = document.getElementsByClassName('spn')
+        // var spans = document.getElementsByClassName('spn')
         for(let i =0 ; i<spans.length;i++){
             // spans[i].classList.add('level-4')
         }
@@ -81,17 +87,29 @@ function Content02() {
                 
             }
         }
+        var tops = document.getElementsByClassName('top')
+            console.log(tops[0].childNodes[0].childNodes[0].innerHTML)
+            for (let index = 1; index < 10; index++) {
+                
+                tops[0].childNodes[index].childNodes[0].innerHTML = posts[0][index].data.title
+                var dat = new Date((posts[0][index].data.created_utc)*1000)
+                tops[0].childNodes[index].childNodes[1].innerHTML = dat.getHours() + ':'+dat.getMinutes()+':'+dat.getSeconds()
+                tops[0].childNodes[index].childNodes[2].innerHTML = posts[0][index].data.score
+                tops[0].childNodes[index].childNodes[3].innerHTML = posts[0][index].data.num_comments
+                tops[0].childNodes[index].childNodes[4].innerHTML = posts[0][index].data.author
+             
+                
+            }
+        
     }
     
     useEffect(()=>{
-        var tops = document.getElementsByClassName('top')
         var spans = document.getElementsByClassName('spn')
         for(let i =0 ; i<spans.length;i++){
             // spans[i].classList.add('level-3')
             spans[i].childNodes[0].innerHTML=0
             // console.log(spans.length)
         }
-        console.log(tops[0].childNodes)
         // // spans[0].innerHTML= parseInt(spans[0].innerHTML)+1
         // var mmmj = parseInt( spans[0].childNodes[0].innerHTML)+5
         // // spans[0].childNodes[0].innerHTML = parseInt((spans[0].childNodes[0].innerHTML)+1)
