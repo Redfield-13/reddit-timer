@@ -12,6 +12,7 @@
     margin-left: 11.25%;
     margin-right: 11.25%;
     align-items: center;
+    margin-bottom: 119px;
 }
 
 .search{
@@ -73,6 +74,7 @@ cursor: pointer;
     margin-left: 163px;
     /* margin-right: 163px; */
     position: relative;
+    margin-bottom: 133px;
 }
 
 .time{
@@ -85,7 +87,7 @@ cursor: pointer;
 .col{
     width: 86.17%;
     height: 280px;
-    background-color:blue;
+    /* background-color:blue; */
     margin-left: 13.83%;
 }
 .days{
@@ -101,3 +103,118 @@ cursor: pointer;
     position: absolute;
 }
 
+.hours{
+    font-size: 85%;
+    font-weight: 600;
+    line-height: 17.07px;
+    font-style: normal;
+    color: #787878;
+   padding-top: 17px;
+   padding-right: 2%;
+}
+
+.says{
+    width: 100%;
+    height: 40px;
+    /* background-color: orange; */
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    /* padding-top: 14.5px; */
+}
+
+.says p{
+color: #ffffff;
+    padding-top: 14px;
+    font-size: 15px;
+    line-height: 11px;
+}
+.sqr{
+    width: 100%;
+    height: 40px;
+    background-color: coral;
+}
+.spn{
+    width: 4.166%;
+    height: 40px;
+    background-color: #a0ce93;
+    float: left;
+    color: #ffffff;
+    /* line-height: 9px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; */
+    /* padding: auto;
+    margin: auto; */
+    text-align: center;
+}
+
+.posts{
+    width: 51.25%;
+    height: 350px;
+    margin-left: 24.375%;
+}
+
+.text-block-1{
+    width: 100%;
+    height: 122px;
+    text-align: left;
+    background-color:white;
+    margin-bottom: 105px;
+}
+
+.text-block-2{
+    width: 100%;
+    height: 123px;
+    text-align: left;
+    color: white;
+}
+
+.how-it{
+    font-size: 24px;
+    line-height: 28.5px;
+    color: #000000;
+    font-weight: 400;
+    font-family: 'Bitter', serif;
+    margin-bottom: 12px;
+}
+
+.dot{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #93918f;
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.about-it{
+    font-size: 24px;
+    line-height: 28.5px;
+    color: #000000;
+    font-weight: 400;
+    font-family: 'Bitter', serif;
+    margin-bottom: 12px;
+}
+
+.text-table{
+    width: 100%;
+    height: 81px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #93918f;
+}
+
+strong{
+    color: #51abfb;
+}
+
+/* .pst{
+    float: left;
+} */
+
+.spn-textt{
+    padding-top: 8px;
+}
