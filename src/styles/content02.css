@@ -156,3 +156,55 @@ span.col-3{
     background-color: #3984A3;
 
 }
+
+#load{
+    display: none;
+    color: #1D2536; 
+    font-size: 16px;
+}
+
+@keyframes example {
+    0%   {transform: rotate(0deg); }
+    100% {transform: rotate(360deg); }
+  }
+
+.load{
+      /* animation-name: example;
+      animation-duration: 5s; */
+      transform: rotate(0deg);
+    transition: transform 0.7s linear;
+    position: absolute;
+    animation-name: rotates;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    
+ }
+
+ .loader{
+    position: relative;
+	width: 80px;
+	height: 80px;
+	/* border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 50%; */
+	transform: rotate(0deg);
+    transition: transform 0.7s linear;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation-name: rotate;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+ }
+ @keyframes rotate{
+  
+    from {transform: rotateZ(-360deg)};
+    to {transform: rotateZ(0deg)};
+       
+     }
+
+@keyframes rotates{
+  
+        from {transform: rotateZ(360deg)};
+        to {transform: rotateZ(0deg)};
+           
+}

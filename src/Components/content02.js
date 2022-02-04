@@ -1,15 +1,21 @@
+
 import '../styles/content02.css'
-import React, {useEffect} from 'react'
+import React, {useEffect,useState} from 'react'
 import  Axios from 'axios'
+import Logo from '../images/signsgin.png'
 
 function Content02() {
-
+    const [remain,setRemain] = useState(20)
+    const [loading,setLoading] = useState(true)
     const fetchposts = async ()=>{
+        document.getElementById('search-02').style.marginBottom = 0
+        console.log('serach started....')
+        setLoading(true)
+        setRemain(20)
+        document.getElementById('load').style.display = 'block'
         var spans = document.getElementsByClassName('spn')
         for(let i =0 ; i<spans.length;i++){
-            // spans[i].classList.add('level-3')
             spans[i].childNodes[0].innerHTML=0
-            // console.log(spans.length)
         }
         console.log('click')
         var subreddit = document.getElementById('subreddit').value
@@ -19,15 +25,19 @@ function Content02() {
         for (let index = 0; index < 20; index++) {
             await Axios.get(`${link}${after}`).then(res=>{
                 console.log(index)
+                setRemain(20-(index+1))
                 after = res.data.data.after
                 posts = [...posts,res.data.data.children]
             })
             
         }
+        // setLoading(false)
+        
         console.log(posts)
         var days = [[],[],[],[],[],[],[]]
         console.log(posts)
         for (let index = 0; index < posts.length; index++) {
+            setLoading(false)
             for(let i = 0; i < (posts[0].length)-2; i++ ){
                 console.log('i : '+i)
                 console.log('index : '+index)
@@ -38,9 +48,7 @@ function Content02() {
             }
             
         }
-        // var spans = document.getElementsByClassName('spn')
         for(let i =0 ; i<spans.length;i++){
-            // spans[i].classList.add('level-4')
         }
         for (let index = 0; index < days.length; index++) {
             console.log('days length : '+days[index].length)
@@ -53,7 +61,6 @@ function Content02() {
                 var mmj = parseInt( spans[((index*24)+hours)].childNodes[0].innerHTML)+1
                 spans[((index*24)+hours)].childNodes[0].innerHTML =mmj
                 
-                // console.log(mmj)
             }
             
         }
@@ -63,26 +70,21 @@ function Content02() {
             console.log('compare : '+compare)
             console.log('index:'+index)
             if (compare == 0) {
-                // alert('level-1')
                 spans[index].classList.add('level-1')
             }
             if (compare > 0 && compare < 4) {
-                // alert('level-2')
                 spans[index].classList.add('level-2')
                 
             }
             if (compare>3 && compare < 6) {
-                // alert('level-3')
                 spans[index].classList.add('level-3')
                 
             }
             if (compare>5 && compare < 10) {
-                // alert('level-4')
                 spans[index].classList.add('level-4')
                 
             }
             if (compare>9) {
-                // alert('level-5')
                 spans[index].classList.add('level-5')
                 
             }
@@ -100,30 +102,33 @@ function Content02() {
              
                 
             }
-        
+       
     }
     
     useEffect(()=>{
         var spans = document.getElementsByClassName('spn')
         for(let i =0 ; i<spans.length;i++){
-            // spans[i].classList.add('level-3')
             spans[i].childNodes[0].innerHTML=0
-            // console.log(spans.length)
         }
-        // // spans[0].innerHTML= parseInt(spans[0].innerHTML)+1
-        // var mmmj = parseInt( spans[0].childNodes[0].innerHTML)+5
-        // // spans[0].childNodes[0].innerHTML = parseInt((spans[0].childNodes[0].innerHTML)+1)
-        // spans[0].childNodes[0].innerHTML = mmmj
     })
 
     
     return (
         <div className='content-02'>
-            <div className="search-02">
+            <div id='search-02' className="search-02">
                 <h1 className='reaction-02'>Find the best time for a subreddit</h1>
                 <p className='input'>r/ </p><input id='subreddit' type="text"/>
                 <button className='best-02' onClick={fetchposts}>Search</button>
             </div>
+            {loading?console.log('kk'):document.getElementById('search-02').style.marginBottom =''}
+            <h1 id='load'>{loading?<div>
+                <p>loading....wait for : {remain}</p>
+                <div className='loader'>
+            
+            <img className='load' src={Logo} alt=""/>
+             </div>
+            </div>:<h2></h2>}</h1>
+            
             <div className="table">
                 <div className="time">
                     <ul className='hours'><li>12:00am</li><li>2:00am</li><li>4:00am</li><li>6:00am</li><li>8:00am</li><li>10:00am</li><li>12:00pm</li><li>2:00pm</li><li>4:00pm</li><li>6:00pm</li><li>8:00pm</li><li>10:00pm</li></ul>

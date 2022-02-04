@@ -1,9 +1,10 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import '../styles/content.css'
 import {Link} from 'react-router-dom'
 import  Axios from 'axios'
 
 function Content() {
+    const [loading,setLoading] = useState(true)
     const fetchposts = async ()=>{
         console.log('click')
         // var subreddit = document.getElementById('subreddit').value
@@ -18,13 +19,15 @@ function Content() {
             })
 
         }
+        setLoading(false)
+        
         // console.log(posts[0][0].data.created_utc)
         var days = [[],[],[],[],[],[],[]]
         console.log(posts)
         for (let index = 0; index < posts.length; index++) {
             for(let i = 0; i < (posts[0].length)-2; i++ ){
-                console.log('i : '+i)
-                console.log('index : '+index)
+                // console.log('i : '+i)
+                // console.log('index : '+index)
                 var timestamp = posts[index][i].data.created_utc
                 var date = new Date(timestamp*1000)
                 days[date.getDay()].push(timestamp)
@@ -37,13 +40,13 @@ function Content() {
             // spans[i].classList.add('level-4')
         }
         for (let index = 0; index < days.length; index++) {
-            console.log('days length : '+days[index].length)
+            // console.log('days length : '+days[index].length)
             for(let i = 0; i <days[index].length-2;i++){
                 var unix_t = days[index][i]*1000
                 var d = new Date(unix_t)
                 var hours = d.getHours()
-                console.log('i:'+i)
-                console.log('iterate:'+((index*24)+hours-1))
+                // console.log('i:'+i)
+                // console.log('iterate:'+((index*24)+hours-1))
                 var mmj = parseInt( spans[((index*24)+hours)].childNodes[0].innerHTML)+1
                 spans[((index*24)+hours)].childNodes[0].innerHTML =mmj
 
@@ -54,9 +57,9 @@ function Content() {
 
         for (let index = 0; index < spans.length; index++) {
             var compare = parseInt(spans[index].childNodes[0].innerHTML)
-            console.log('compare : '+compare)
-            console.log('index:'+index)
-            if (compare == 0) {
+            // console.log('compare : '+compare)
+            // console.log('index:'+index)
+            if (compare === 0) {
                 // alert('level-1')
                 spans[index].classList.add('level-1')
             }
@@ -83,7 +86,7 @@ function Content() {
         }
     }
 
-
+   
 
     useEffect(()=>{
         fetchposts()
@@ -91,6 +94,7 @@ function Content() {
 
     return (
         <div className='content'>
+        {/* {loading?null:console.log('loading done.')} */}
             <div className="search">
                 <h1 className='reaction'>No reactions to your reddit posts?</h1>
                 <p className='great'>Great timing, great resutls! Find the best time to post on your subreddit.</p>
@@ -106,186 +110,186 @@ function Content() {
                 </div>
                 <div className="col">
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
-                       <div className="spn"><p className='spn-textt'>1</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
+                       <div className="spn"><p className='spn-textt'>0</p></div>
                     </div>
                 </div>
                 <div className="days">
