@@ -8,28 +8,36 @@ import Rows from './Rows'
 function Content02() {
     const [remain,setRemain] = useState(20)
     const [loading,setLoading] = useState(true)
+    const [error, setError] = useState(null);
     const fetchposts = async ()=>{
         document.getElementById('search-02').style.marginBottom = 0
+        var spans = document.getElementsByClassName('spn')
+        for(let i =0 ; i<spans.length;i++){
+            console.log(spans[i].classList[spans[i].classList.length-1]);
+            spans[i].classList.remove(spans[i].classList[2])
+            spans[i].childNodes[0].innerHTML=0
+            spans[i].classList.add('level-1')
+        }
         console.log('serach started....')
         setLoading(true)
         setRemain(20)
         document.getElementById('load').style.display = 'block'
-        var spans = document.getElementsByClassName('spn')
-        for(let i =0 ; i<spans.length;i++){
-            spans[i].childNodes[0].innerHTML=0
-        }
         console.log('click')
         var subreddit = document.getElementById('subreddit').value
         var link = 'https://www.reddit.com/r/'+subreddit+'/top.json?limit=23&t=all&after='
         var posts = []
         var after = ''
         for (let index = 0; index < 20; index++) {
+            try{
             await Axios.get(`${link}${after}`).then(res=>{
                 console.log(index)
                 setRemain(20-(index+1))
                 after = res.data.data.after
                 posts = [...posts,res.data.data.children]
             })
+            } catch(error){
+                console.log('Error fetching data:', error)
+            }
             
         }
         // setLoading(false)
@@ -40,8 +48,8 @@ function Content02() {
         for (let index = 0; index < posts.length; index++) {
             setLoading(false)
             for(let i = 0; i < (posts[0].length)-2; i++ ){
-                console.log('i : '+i)
-                console.log('index : '+index)
+                // console.log('i : '+i)
+                // console.log('index : '+index)
                 var timestamp = posts[index][i].data.created_utc
                 var date = new Date(timestamp*1000)
                 days[date.getDay()].push(timestamp)
@@ -57,8 +65,8 @@ function Content02() {
                 var unix_t = days[index][i]*1000
                 var d = new Date(unix_t)
                 var hours = d.getHours()               
-                console.log('i:'+i)
-                console.log('iterate:'+((index*24)+hours-1))
+                // console.log('i:'+i)
+                // console.log('iterate:'+((index*24)+hours-1))
                 var mmj = parseInt( spans[((index*24)+hours)].childNodes[0].innerHTML)+1
                 spans[((index*24)+hours)].childNodes[0].innerHTML =mmj
                 
@@ -68,8 +76,8 @@ function Content02() {
 
         for (let index = 0; index < spans.length; index++) {
             var compare = parseInt(spans[index].childNodes[0].innerHTML)
-            console.log('compare : '+compare)
-            console.log('index:'+index)
+            // console.log('compare : '+compare)
+            // console.log('index:'+index)
             if (compare == 0) {
                 spans[index].classList.add('level-1')
             }
@@ -227,14 +235,14 @@ function Content02() {
                         <span className='col-2'></span>
                     </div>
                     <div className="row-1">
-                    <span className='col-1'></span>
+                        <span className='col-1'></span>
                         <span className='col-2'></span>
                         <span className='col-3'></span>
                         <span className='col-2'></span>
                         <span className='col-2'></span>
                     </div>
                     <div className="row-2">
-                    <span className='col-1'></span>
+                        <span className='col-1'></span>
                         <span className='col-2'></span>
                         <span className='col-3'></span>
                         <span className='col-2'></span>

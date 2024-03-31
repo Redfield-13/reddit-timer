@@ -5,7 +5,7 @@ function Rows() {
     <div className="sqr">
                         {Array(24).fill(0).map((_, index) => (
                             <div key={index} className="spn">
-                            <p className="spn-textt">0</p>
+                            <p className="spn-textt">-</p>
                             </div>
                         ))}
     </div>

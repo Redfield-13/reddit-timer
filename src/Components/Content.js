@@ -8,6 +8,11 @@ function Content() {
     const [loading,setLoading] = useState(true)
     const fetchposts = async ()=>{
         console.log('click')
+        var spans = document.getElementsByClassName('spn')
+        for(let i =0 ; i<spans.length;i++){
+            spans[i].childNodes[0].innerHTML=0
+            spans[i].classList.add('level-1')
+        }
         // var subreddit = document.getElementById('subreddit').value
         var link = 'https://www.reddit.com/r/javascript/top.json?limit=23&t=all&after='
         var posts = []
@@ -18,8 +23,9 @@ function Content() {
                 after = res.data.data.after
                 posts = [...posts,res.data.data.children]
             })
-
+            
         }
+        
         setLoading(false)
         
         // console.log(posts[0][0].data.created_utc)
@@ -38,7 +44,8 @@ function Content() {
         }
         var spans = document.getElementsByClassName('spn')
         for(let i =0 ; i<spans.length;i++){
-            // spans[i].classList.add('level-4')
+            spans[i].childNodes[0].innerHTML=0
+            spans[i].classList.add('level-1')
         }
         for (let index = 0; index < days.length; index++) {
             // console.log('days length : '+days[index].length)
