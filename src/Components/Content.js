@@ -18,11 +18,15 @@ function Content() {
         var posts = []
         var after = ''
         for (let index = 0; index < 20; index++) {
-            await Axios.get(`${link}${after}`).then(res=>{
-                console.log(index)
-                after = res.data.data.after
-                posts = [...posts,res.data.data.children]
-            })
+            try{
+                await Axios.get(`${link}${after}`).then(res=>{
+                    console.log(index)
+                    after = res.data.data.after
+                    posts = [...posts,res.data.data.children]
+                })
+                } catch(error){
+                    console.log('Error fetching data:', error)
+            }
             
         }
         
