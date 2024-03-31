@@ -3,6 +3,7 @@ import '../styles/content02.css'
 import React, {useEffect,useState} from 'react'
 import  Axios from 'axios'
 import Logo from '../images/signsgin.png'
+import Rows from './Rows'
 
 function Content02() {
     const [remain,setRemain] = useState(20)
@@ -135,186 +136,25 @@ function Content02() {
                 </div>
                 <div className="col">
                     <div className="sqr">
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                    <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                    <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                    <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                    <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                    <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                    <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
-                       <div className="spn"><p className='spn-text'>1</p></div>
+                        <Rows></Rows>
                     </div>
                 </div>
                 <div className="days">

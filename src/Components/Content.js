@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react'
 import '../styles/content.css'
 import {Link} from 'react-router-dom'
 import  Axios from 'axios'
+import Rows from './Rows'
 
 function Content() {
     const [loading,setLoading] = useState(true)
@@ -110,186 +111,25 @@ function Content() {
                 </div>
                 <div className="col">
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
+                        <Rows></Rows>
                     </div>
                     <div className="sqr">
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
-                       <div className="spn"><p className='spn-textt'>0</p></div>
+                        <Rows></Rows>
                     </div>
                 </div>
                 <div className="days">
